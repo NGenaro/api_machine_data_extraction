@@ -338,7 +338,7 @@ def fetch_products_data(data):
                             ########################################################################
 
                             if len(products) >= 15:
-                                logging.info("Limit of 15 products reached. Stopping collection.")
+                                logging.info("  |_ Limit of 15 products reached. Stopping collection.")
                                 subsubcat["product"] = products
                                 return data 
 

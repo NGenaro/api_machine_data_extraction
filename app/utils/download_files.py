@@ -1,5 +1,7 @@
 import requests
 from pathlib import Path
+import time
+import logging
 
 def download_with_retry(url, retries=3, delay=5):
     """
@@ -28,10 +30,10 @@ def download_with_retry(url, retries=3, delay=5):
                 return response.content
             
             else:
-                logging.info(f"Try {attempt}/{retries} - failed to download {url} (status {response.status_code})")
+                logging.info(f"  |  |_ Try {attempt}/{retries} - failed to download {url} (status {response.status_code})")
 
         except Exception as e:
-            logging.info(f"Try {attempt}/{retries} - error downloading {url}: {e}")
+            logging.info(f"  |  |_ Try {attempt}/{retries} - error downloading {url}: {e}")
         time.sleep(delay)
 
     return None
@@ -46,6 +48,9 @@ def download_product_files(data):
 
     Returns:
         list: Paths to successfully saved files.
+
+    Example use:
+        saved_files = download_product_files(data)
     """
 
     saved_files = []
@@ -81,12 +86,12 @@ def download_product_files(data):
                                 with open(dest_path, "wb") as f:
                                     f.write(content)
                                 saved_files.append(str(dest_path))
-                                logging.info(f"File saved: {dest_path}")
+                                logging.info(f"  |  |_ File saved: {dest_path}")
 
                             except Exception as e:
-                                logging.info(f"Error saving file {dest_path}: {e}")
+                                logging.info(f"  |  |_ Error saving file {dest_path}: {e}")
 
                         else:
-                            logging.info(f"Failed to download after retries: {url}")
+                            logging.info(f"  |  |_ Failed to download after retries: {url}")
 
     return saved_files

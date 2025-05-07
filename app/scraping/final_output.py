@@ -1,15 +1,19 @@
 import json
 from pathlib import Path
+import logging
 
 def build_final_output(data):
     """
     Merge detailed product JSONs back into the original category hierarchy structure.
 
     Parameters:
-        data (List[dict]): Hierarchical data with categories → subcategories → sub-subcategories → product codes.
+        data (List[dict]) - Hierarchical data with categories → subcategories → sub-subcategories → product codes.
 
     Returns:
-        List[dict]: Complete nested structure with product JSONs fully embedded.
+        List[dict] - Complete nested structure with product JSONs fully embedded.
+
+    Example use:
+        final_output = build_final_output(data)
     """
 
     product_jsons = {}
@@ -21,7 +25,7 @@ def build_final_output(data):
                 if code:
                     product_jsons[code] = prod_data
         except Exception as e:
-            logging.error(f"Error loading product JSON {file}: {e}")
+            logging.error(f"  |  |_ Error loading product JSON {file}: {e}")
 
     final_structure = []
 

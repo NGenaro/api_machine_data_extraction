@@ -1,11 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse, JSONResponse
+
+import logging
 from typing import Dict, Any, Union
 import requests
 import json
 import time
 import os
-from glob import glob
+import shutil
 
 from utils.general_utils import setup_logging, CHECKPOINT, save_checkpoint, load_checkpoint
 from utils.pre_process import clean_bom
@@ -30,8 +32,8 @@ app = FastAPI(
 
 logger = setup_logging("history_log")
 
-@app.post("/coleta", response_model=None, tags=["BALDOR"])
-async def processo_de_coleta(consulta: str) -> Union[FileResponse, Dict[str, Any]]:
+@app.post("/collect_data", response_model=None, tags=["SCRAP"], status_code=200)
+async def data_collection_process(query: str) -> Union[FileResponse, Dict[str, Any]]:
     """
     Performs automated machinery‑data collection from the specified website.
     
@@ -39,20 +41,23 @@ async def processo_de_coleta(consulta: str) -> Union[FileResponse, Dict[str, Any
     - **BALDOR** - [Baldor Electric Company](https://www.baldor.com/)
 
     Parameters
-    - **Consulta** (str) - Name of the website to query.  
+    - **Query** (str) - Name of the website to query.  
     - **Example** - **BALDOR**
 
      Returns
     - A JSON file containing the data extracted from the selected site.
 
     Estimated runtime
-    - **Minimum:** 30 minutes  
+    - **Minimum:** 5 minutes  
     - **Average:** 1 hour  
     - **Maximum:** 5 hours  
       *Note:* The actual time depends on site stability and the amount of data returned.
     """
 
-    if consulta.upper() != "BALDOR":
+    if os.path.exists("output"):
+        shutil.rmtree("output")
+
+    if query.upper() != "BALDOR":
         raise HTTPException(status_code=400, detail="Query not yet supported.")
 
     MAX_RETRIES = 5
@@ -67,11 +72,10 @@ async def processo_de_coleta(consulta: str) -> Union[FileResponse, Dict[str, Any
 
             clean_bom(data)
 
+            logging.info(f"  |_ Downloading ...")
             download_product_files(data)
 
-            import pprint
-            pprint.pprint(data, depth=4)
-
+            logging.info(f"  |_ Formatting ...")
             output_formater(data)  
 
             final_output = build_final_output(data) 
@@ -83,15 +87,18 @@ async def processo_de_coleta(consulta: str) -> Union[FileResponse, Dict[str, Any
             if os.path.exists(CHECKPOINT):
                 os.remove(CHECKPOINT)
 
+            logging.info(f"  |_ Process completed successfully!")
+
             return JSONResponse(content=final_output)
 
         except Exception as exc:
-            logging.info(f"Attempt {attempt+1}/{MAX_RETRIES} failed: {exc}. Retrying in 5 minutes...")
+            logging.info(f"  |_ Attempt {attempt+1}/{MAX_RETRIES} failed: {exc}. Retrying in 5 minutes...")
             save_checkpoint(data)
             session.cookies.clear()
             time.sleep(5 * 60)
 
     raise HTTPException(status_code=500, detail="Maximum retries reached. Process aborted.")
+
 
 @app.get("/ready", tags=["Status"], status_code=200)
 async def status():
