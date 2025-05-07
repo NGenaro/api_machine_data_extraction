@@ -39,10 +39,12 @@ project/
 ├── app/
 │   ├── utils/
 │   │   ├── config.py                 # Variáveis globais, caminhos, constantes
-│   │   └── data_dictionary.py   # Dicionários com rotas ou mapeamentos
-│   ├── services/                    # Lógica de negócio (scraping, etc)
-│   │   ├── scraping_functions.py
-│   │   └── base64_converter.py
+│   │   └── data_dictionary.py        # Dicionários com rotas ou mapeamentos
+│   ├── scraping/                     # Lógica de negócio (scraping, etc)
+│   │   ├── baldor
+│   │   │   ├── scraping_functions.py
+│   │   │   └── base64_converter.py
+│   │   └── outros sites
 │   ├── main.py                      # FastAPI app e inclusão das rotas
 │   └── __init__.py
 ├── output/                          # Arquivos gerados pelo sistema
@@ -153,3 +155,112 @@ f"https://www.baldor.com/AssetImage.axd?id={image_id}"
 
 url = f"https://www.baldor.com/api/products/{product_id}/drawings"
 f"https://www.baldor.com/api/products/{product_id}/drawings/{number}"
+
+
+
+
+
+
+
+
+
+saida esperada da funcao 
+```json
+{
+  "product_id": "CEM4313T",
+  "name": "Motor AC Trifásico",
+  "description": "75HP, 3555RPM, 3PH, 60HZ, 365TSC, A36068M, TEF",
+  "upc": "781568603659",
+  "USD": 18900.0,
+  "specs": {
+    "hp": "75hp", - vem de "output_at_frequency": 
+    "voltage": "230V", - vem de "voltage_at_frequency": 
+    "rpm": "3600rpm", - vem de "synchronous_speed_at_freq": 
+    "frame": "60", vem de "frame": 
+  },
+  "bom": [
+    {
+      "part_number": "702676001C",
+      "description": "FAN  360",
+      "quantity": "1.000 EA"
+    },
+    {
+      "part_number": "412118006A",
+      "description": "DRAIN",
+      "quantity": "1.000 EA"
+    },
+    {
+      "part_number": "412118006A",
+      "description": "DRAIN",
+      "quantity": "1.000 EA"
+    }
+  ],
+  "docs_base64": {
+    "manual": "SLJKDHFKHGA/.../SKA20935423H/KJB42352342/2342;5EÇRWÉ",
+    "cad": "SLJKDHFKHGA/.../SKA20935423H/KJB42352342/2342;5EÇRWÉ",
+    "image": "SLJKDHFKHGA/.../SKA20935423H/KJB42352342/2342;5EÇRWÉ"
+  }
+}
+```
+
+
+
+
+
+[
+  {
+    "category_id": 2,
+    "name": "AC Motors",
+    "count": 6197,
+    "imageId": 1007,
+    "subcategories": [
+      {
+        "subcategory_id": 69,
+        "name": "General Purpose",
+        "count": 2047,
+        "sub_subcategory": [
+          {
+            "sub_subcategory_id": 110,
+            "name": "Three Phase Enclosed",
+            "count": 752,
+            "product": [
+              {
+                "product_id": "CEM4313T",
+                "name": "Motor AC Trifásico",
+                "description": "75HP, 3555RPM, 3PH, 60HZ, 365TSC, A36068M, TEF",
+                "upc": "781568603659",
+                "USD": 18900.0,
+                "specs": {
+                  "hp": "75hp",
+                  "voltage": "230V",
+                  "rpm": "3600rpm",
+                  "frame": "60"
+                },
+                "bom": [
+                  {
+                    "part_number": "702676001C",
+                    "description": "FAN  360",
+                    "quantity": "1.000 EA"
+                  },
+                  {
+                    "part_number": "412118006A",
+                    "description": "DRAIN",
+                    "quantity": "1.000 EA"
+                  },
+                  {
+                    "part_number": "412118006A",
+                    "description": "DRAIN",
+                    "quantity": "1.000 EA"
+                  }
+                ],
+                "assets": {
+                  "manual": "assets/CEM4313T/manual.pdf",
+                  "cad": "assets/CEM4313T/cad.dwg",
+                  "image": "assets/CEM4313T/img.jpg"
+                },
+                "docs_base64": {
+                  "manual": "JVBERi0xLjQ..."
+                  "cad": "JVBERi0xLjQNJ..."
+                  "image": "/9j/4AAQSkZ..."
+                }
+                ...

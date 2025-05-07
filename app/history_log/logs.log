@@ -1,0 +1,77 @@
+2025-05-07 01:38:40,910 - INFO - _ Fetching main categories from Baldor API
+2025-05-07 01:38:40,911 - INFO -   |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10
+2025-05-07 01:38:41,194 - INFO -   |_ Fetching subcategories for category ID: 2
+2025-05-07 01:38:41,195 - INFO -   |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=2
+2025-05-07 01:38:42,112 - INFO -   |_ Fetching subcategories for category ID: 3
+2025-05-07 01:38:42,112 - INFO -   |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=3
+2025-05-07 01:38:42,361 - INFO -   |_ Fetching subcategories for category ID: 4
+2025-05-07 01:38:42,361 - INFO -   |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=4
+2025-05-07 01:38:42,712 - INFO -   |_ Fetching subcategories for category ID: 5
+2025-05-07 01:38:42,712 - INFO -   |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=5
+2025-05-07 01:38:43,104 - INFO -   |_ Fetching subcategories for category ID: 6
+2025-05-07 01:38:43,104 - INFO -   |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=6
+2025-05-07 01:38:43,519 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 69
+2025-05-07 01:38:43,519 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=69
+2025-05-07 01:38:43,894 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 25
+2025-05-07 01:38:43,894 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=25
+2025-05-07 01:38:44,211 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 16
+2025-05-07 01:38:44,211 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=16
+2025-05-07 01:38:44,568 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 24
+2025-05-07 01:38:44,569 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=24
+2025-05-07 01:38:44,930 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 23
+2025-05-07 01:38:44,930 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=23
+2025-05-07 01:38:45,306 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 18
+2025-05-07 01:38:45,306 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=18
+2025-05-07 01:38:45,675 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 20
+2025-05-07 01:38:45,675 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=20
+2025-05-07 01:38:46,030 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 19
+2025-05-07 01:38:46,030 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=19
+2025-05-07 01:38:46,384 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 21
+2025-05-07 01:38:46,384 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=21
+2025-05-07 01:38:46,725 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 26
+2025-05-07 01:38:46,726 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=26
+2025-05-07 01:38:47,114 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 145
+2025-05-07 01:38:47,114 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=145
+2025-05-07 01:38:47,455 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 226
+2025-05-07 01:38:47,456 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=226
+2025-05-07 01:38:47,763 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 403
+2025-05-07 01:38:47,763 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=403
+2025-05-07 01:38:48,076 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 44
+2025-05-07 01:38:48,077 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=44
+2025-05-07 01:38:48,399 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 45
+2025-05-07 01:38:48,399 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=45
+2025-05-07 01:38:48,676 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 257
+2025-05-07 01:38:48,676 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=257
+2025-05-07 01:38:48,949 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 13
+2025-05-07 01:38:48,949 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=13
+2025-05-07 01:38:49,261 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 213
+2025-05-07 01:38:49,261 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=213
+2025-05-07 01:38:49,645 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 239
+2025-05-07 01:38:49,645 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=239
+2025-05-07 01:38:49,920 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 272
+2025-05-07 01:38:49,920 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=272
+2025-05-07 01:38:50,255 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 207
+2025-05-07 01:38:50,255 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=207
+2025-05-07 01:38:50,561 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 377
+2025-05-07 01:38:50,561 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=377
+2025-05-07 01:38:50,880 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 206
+2025-05-07 01:38:50,881 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=206
+2025-05-07 01:38:51,234 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 208
+2025-05-07 01:38:51,234 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=208
+2025-05-07 01:38:51,563 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 210
+2025-05-07 01:38:51,563 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=210
+2025-05-07 01:38:51,847 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 211
+2025-05-07 01:38:51,847 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=211
+2025-05-07 01:38:52,118 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 402
+2025-05-07 01:38:52,118 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=402
+2025-05-07 01:38:52,394 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 31
+2025-05-07 01:38:52,394 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=31
+2025-05-07 01:38:52,810 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 32
+2025-05-07 01:38:52,810 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=32
+2025-05-07 01:38:53,228 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 33
+2025-05-07 01:38:53,229 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=33
+2025-05-07 01:38:53,568 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 34
+2025-05-07 01:38:53,568 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=34
+2025-05-07 01:38:53,907 - INFO -   |     |_ Fetching sub-subcategories for subcategory ID: 50
+2025-05-07 01:38:53,907 - INFO -   |     |  |_ URL: https://www.baldor.com/api/products?include=results&language=en-US&include=filters&include=category&pageSize=10&category=50
+2025-05-07 01:38:54,175 - INFO -   |     |     |_ sub_subcategory 110 page 1
