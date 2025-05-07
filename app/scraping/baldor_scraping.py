@@ -3,7 +3,6 @@ import logging
 import json
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-
 import time
 import os
 

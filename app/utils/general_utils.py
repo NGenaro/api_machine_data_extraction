@@ -4,10 +4,8 @@ from typing import Any
 import json
 import os
 
-
 RETRY_STATUS = {429, 500, 502, 503, 504}
 CHECKPOINT = "checkpoint.json"
-
 
 session = requests.Session()
 session.headers.update({
@@ -15,6 +13,9 @@ session.headers.update({
     "Accept": "application/json"
 })
 
+##########################################################################################################
+# Function to creates and saves logs in a directory ######################################################
+##########################################################################################################
 
 def setup_logging(log_dir_path):
     """
@@ -42,6 +43,10 @@ def setup_logging(log_dir_path):
 
     return logging
 
+##########################################################################################################
+# Function to saves data to checkpoint ###################################################################
+##########################################################################################################
+
 def save_checkpoint(data: Any) -> None:
     """
     Function to save the current state of the data to a checkpoint file.
@@ -58,6 +63,9 @@ def save_checkpoint(data: Any) -> None:
     with open(CHECKPOINT, "w") as fp:
         json.dump(data, fp)
 
+##########################################################################################################
+# Function to loads data from checkpoint #################################################################
+##########################################################################################################
 
 def load_checkpoint() -> Any | None:
     """
@@ -77,6 +85,9 @@ def load_checkpoint() -> Any | None:
             return json.load(fp)
     return None
 
+##########################################################################################################
+# Function to performs GET with error handling ###########################################################
+##########################################################################################################
 
 def safe_get(url: str, **kwargs):
     """

@@ -2,6 +2,10 @@ import json
 from pathlib import Path
 import logging
 
+##########################################################################################################
+# Funcrion to format final output ########################################################################
+##########################################################################################################
+
 def build_final_output(data):
     """
     Merge detailed product JSONs back into the original category hierarchy structure.
