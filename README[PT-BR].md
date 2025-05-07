@@ -100,9 +100,9 @@ Exemplo do retorno do JSON:
 }
 ```
 
-Visualização do funcionamento da api com o retorno:
+Visualização da api:
 
-<video controls src="app/data/api_example.mp4" title="Title" style="width: 100%;"></video>
+![alt text](app/data/api_example.gif) 
 
 ## EXECUTANDO O PROJETO
 
@@ -130,6 +130,3 @@ Seguido de
 docker run -p 5000:5050 scrap
 ```
 
-Você pode acompanhar o desempenho e erros nos logs, como pode ser visto no exemplo a seguir:
-
-<video controls src="app/data/logs_example.mp4" title="Title" style="width: 100%;"></video>

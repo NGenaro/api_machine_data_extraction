@@ -101,9 +101,9 @@ Example JSON response:
 }
 ```
 
-API functioning visualization with the response:
+API visualization:
 
-<video controls src="app/data/api_example.mp4" title="Title" style="width: 100%;"></video>
+![alt text](app/data/api_example.gif) 
 
 ## RUNNING THE PROJECT
 
@@ -129,8 +129,3 @@ docker build -t scrap .
 ```bash
 docker run -p 5000:5050 scrap
 ```
-
-You can monitor performance and errors in the logs, as shown in the following example:
-
-<video controls src="app/data/logs_example.mp4" title="Title" style="width: 100%;"></video>
-
