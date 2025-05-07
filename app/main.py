@@ -103,4 +103,3 @@ async def data_collection_process(query: str) -> Union[FileResponse, Dict[str, A
 @app.get("/ready", tags=["Status"], status_code=200)
 async def status():
     return {"status": "API running correctly!"}
-
