@@ -86,7 +86,7 @@ async def processo_de_coleta(consulta: str) -> Union[FileResponse, Dict[str, Any
             return JSONResponse(content=final_output)
 
         except Exception as exc:
-            logger.warning(f"Attempt {attempt+1}/{MAX_RETRIES} failed: {exc}. Retrying in 5 minutes...")
+            logging.info(f"Attempt {attempt+1}/{MAX_RETRIES} failed: {exc}. Retrying in 5 minutes...")
             save_checkpoint(data)
             session.cookies.clear()
             time.sleep(5 * 60)
